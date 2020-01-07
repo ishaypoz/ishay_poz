@@ -5,11 +5,11 @@ const readline = require('readline').createInterface({
     output: process.stdout
   })
 // node api.js 
-readline.question("Please Choose (1,2,3,4) \n 1. /Search \n 2. /Search with more than 1 key \n 3. Get Albums 1 and more \n 4. Get Artist 1 and more \n", (caseKey) => {
+readline.question("Please choose a number (1,2,3,4) \n 1. /Search \n 2. /Search with more than 1 key \n 3. Get Albums 1 and more \n 4. Get Artist 1 and more \n", (caseKey) => {
     // get input caseKey(as string) to the switch case using the readLine module
     switch(caseKey) {
     case '1':
-        readline.question("iTunes Search1: ", (searchKey) => {
+        readline.question("iTunes Search: ", (searchKey) => {
             // make the url for the itunes API search
             var url = 'https://itunes.apple.com/search?term='+encodeURIComponent(searchKey);
             /* fetch the url using node-fetch package get the data as JSON 
